@@ -153,6 +153,17 @@ svg.bq{display:block;width:100%;height:auto}
   .glit{opacity:.5!important}
   html{scroll-behavior:auto}
 }
+
+/* ---------------- MOBILE HARDENING ---------------- */
+html,body{overflow-x:hidden}
+img{max-width:100%;height:auto}
+a.go,.back-link a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+section.screen{
+  padding-left:max(clamp(16px,3.5vw,48px),env(safe-area-inset-left));
+  padding-right:max(clamp(16px,3.5vw,48px),env(safe-area-inset-right));
+  padding-bottom:max(clamp(16px,3.5vw,48px),env(safe-area-inset-bottom))}
+@media (hover:none){.go:hover{background:rgba(253,249,243,.7);letter-spacing:.3em;border-color:var(--rule)}}
+@media (max-width:600px){.glit:nth-of-type(2n){display:none}}
 </style>
 </head>
 <body>
